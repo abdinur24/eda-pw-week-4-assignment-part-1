@@ -66,11 +66,10 @@ console.log('Last item is', getLast(a1));
 
 let a2 = [ 'bike', 'bus', 'truck', 'car']; 
 function find( value, array){
-  for(let v of array)
-  if (value === v){
+  for(let vehicle of array)
+    if (value === vehicle){
     return true;
-  } else {
-  }
+  } 
   return false;
 }
 console.log('Calling funtion find', find('car', a2));
