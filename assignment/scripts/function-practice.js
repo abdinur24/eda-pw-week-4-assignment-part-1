@@ -15,10 +15,10 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return 'Hello, Abdishakur';
+  return 'Hello,' + name;
 }
 // Remember to call the function to test
-console.log('Should return "Hello, Abdishakur"', helloName(name));
+console.log('Should return "Hello, Abdishakur"', helloName('Abdishakur'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -40,8 +40,7 @@ console.log('Running multiplyThree', multiplyThree(5, 2, 4));
 function isPositive( number ) {
   if ( number > 0 ){
     return true;
-  }
-  if (number <= 0)
+  } else (number <= 0)
     return false;
 }
 // Call the function to test each outcome (true & false) 
@@ -58,25 +57,23 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 //    array is empty, return `undefined`.
 let a1 = [1, 2, 3];
 function getLast( array ) {
-array = a1.length
-return array;
+  return array[array.length - 1];
 }
-console.log('Last item is', getLast());
+console.log('Last item is', getLast(a1));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
+
 let a2 = [ 'bike', 'bus', 'truck', 'car']; 
 function find( value, array){
-  array = a2
-  for(value of a2){
-    if(value === 'car'){
-      return true;
-    } else { 
-    }
+  for(let v of array)
+  if (value === v){
+    return true;
+  } else {
   }
   return false;
 }
-console.log('Calling funtion find', find());
+console.log('Calling funtion find', find('car', a2));
 
 // ----------------------
 // Stretch Goals
@@ -85,7 +82,7 @@ console.log('Calling funtion find', find());
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
   string = string.charAt(0)
-  if(letter === string.charAt(0)){
+  if( letter === string.charAt(0)){
     return true;
   } else {
     return false;
@@ -99,7 +96,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 let a3 = [2, 4, 5, 5, 2, 4];
 function sumAll(a3) {
   let sum = 0
-  for(i = 0; i < a3.length; i++){
+  for(let i = 0; i < a3.length; i++){
     sum += a3[i];
   }
   // TODO: loop to add items
